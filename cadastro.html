@@ -45,6 +45,12 @@
                         <label class="input-label" for="senha">Senha</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
+            
+                    <div class="input-container">
+                        <input id="tel" class="input" placeholder="NúmeroTelefone" type="tel" name="telefone" data-tipo="telefone" pattern="^(\(?\d{2}\)?)?(9?\d{4})-?(\d{4})$" required>
+                        <label class="input-label" for="tel">Telefone</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend class="formulario__legenda">Informações pessoais</legend>
@@ -79,6 +85,11 @@
                     <div class="input-container">
                         <input name="estado" id="estado" class="input" type="text" placeholder="Estado" data-tipo="estado" required>
                         <label class="input-label" for="estado">Estado</label>
+                        <span class="input-mensagem-erro">Este campo não está válido</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="instagram" id="instagram" class="input" placeholder="Instagram" data-tipo="instagram" pattern="^@[a-zA-Z0-9._]{1,30}$" required>
+                        <label for="instagram" class="input-label">Instagram</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                 </fieldset>

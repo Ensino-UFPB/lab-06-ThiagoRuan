@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
+    <script src="./js/simple-mask-money.umd.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doguito Petshop | Cadastro de produto</title>
@@ -36,9 +38,10 @@
                     <span class="input-mensagem-erro">Este campo não está válido</span>
                 </div>
                 <div class="input-container cadastro__preco-container">
-                    <input name="preco" id="preco" class="input" type="text" placeholder="Preço">
+                    <input name="preco" id="preco" class="input" type="text" placeholder="Preço" required>
                     <label class="input-label" for="preco">Preço</label>
                     <span class="input-mensagem-erro">Este campo não está válido</span>
+                    
                 </div>
                 <div class="input-container cadastro__descricao-container">
                     <input class="input" name="descricao" id="descricao" placeholder="Descrição">
@@ -49,5 +52,23 @@
             </form>
         </section>
     </main>
+    <script>
+         const preco = document.getElementById('preco')
+         const optionsUSD = {
+             afterFormat(e) { console.log('afterFormat', e); },
+             allowNegative: false,
+             beforeFormat(e) { console.log('beforeFormat', e); },
+             negativeSignAfter: false,
+             prefix: 'R$',
+             suffix: '',
+             fixed: true,
+             fractionDigits: 2,
+             decimalSeparator: ',',
+             thousandsSeparator: '.',
+             cursor: 'end'
+    };
+     
+    SimpleMaskMoney.setMask(preco, optionsUSD);
+    </script>
 </body>
 </html>
