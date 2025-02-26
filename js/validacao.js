@@ -63,8 +63,8 @@ const mensagensDeErro = {
         valueMissing: 'O campo de instagram não pode estar vazio.',
         patternMismatch: 'O instagram digitado não é válido.'
     },
-    preco: {
-      valueMissing: 'O campo de preço não pode estar vazio.'
+    nome: {
+      valueMissing: 'O campo de nome não pode estar vazio.'
     }
 }
 
